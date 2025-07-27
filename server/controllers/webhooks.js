@@ -25,7 +25,7 @@ export const clerkWebhooks = async ()=>{
                     imageUrl: data.image_url,
                 }
                 await User.create(userData)
-                resizeBy.json({})
+                res.json({})
                 break;
             }
             
@@ -36,7 +36,7 @@ export const clerkWebhooks = async ()=>{
                     imageUrl: data.image_url,
                 }
                 await User.findByIdAndUpdate(data.id, userData)
-                resizeBy.json({})
+                res.json({})
                 break;
             }
 
